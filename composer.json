@@ -1,0 +1,50 @@
+{
+    "name": "luchavez/api-keys-vault",
+    "description": "API Keys Vault is package for managing API Keys issued by third party API integrations.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Carlo Luchavez",
+            "email": "jamescarloluchavez@gmail.com",
+            "homepage": "https://www.linkedin.com/in/jsluchavez"
+        }
+    ],
+    "homepage": "https://github.com/luchmewep/api-keys-vault",
+    "keywords": ["Laravel", "ApiKeysVault"],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "~8|~9",
+        "luchavez/api-sdk-kit": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~6|~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luchavez\\ApiKeysVault\\": "src/",
+            "Luchavez\\ApiKeysVault\\Database\\Factories\\": "database/factories",
+            "Luchavez\\ApiKeysVault\\Database\\Seeders\\": "database/seeders"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Luchavez\\ApiKeysVault\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luchavez\\ApiKeysVault\\ApiKeysVaultServiceProvider"
+            ],
+            "aliases": {
+                "ApiKeysVault": "Luchavez\\ApiKeysVault\\Facades\\ApiKeysVault"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.0.x-dev"
+        }
+    }
+}
